@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <button id="musics">music on</button>
+    <header><h2>Casino Roll</h2></header>
+   
+
+    <main>
+      <section id="left">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <img
+                class="left_images"
+                src="images/Picture1.svg"
+                alt="Image 1"
+              />
+              <input
+                id="bow"
+                class="bet_amount"
+                type="number"
+                name="quantity"
+                min="1"
+                max="10"
+                value="0"
+              />
+            </div>
+            <div class="col-sm-4">
+              <img
+                class="left_images"
+                src="images/Picture2.svg"
+                alt="Image 2"
+              />
+              <input
+                id="ball"
+                class="bet_amount"
+                type="number"
+                name="quantity"
+                min="1"
+                max="10"
+                value="0"
+              />
+            </div>
+            <div class="col-sm-4">
+              <img
+                class="left_images"
+                src="images/Picture3.svg"
+                alt="Image 3"
+              />
+              <input
+                id="clock"
+                class="bet_amount"
+                type="number"
+                name="quantity"
+                min="1"
+                max="10"
+                value="0"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <img
+                class="left_images"
+                src="images/Picture4.svg"
+                alt="Image 4"
+              />
+              <input
+                id="apple"
+                class="bet_amount"
+                type="number"
+                name="quantity"
+                min="1"
+                max="10"
+                value="0"
+              />
+            </div>
+            <div class="col-sm-4">
+              <img
+                class="left_images"
+                src="images/Picture5.svg"
+                alt="Image 5"
+              />
+              <input
+                id="umb"
+                class="bet_amount"
+                type="number"
+                name="quantity"
+                min="1"
+                max="10"
+                value="0"
+              />
+            </div>
+            <div class="col-sm-4">
+              <img
+                class="left_images"
+                src="images/Picture6.svg"
+                alt="Image 6"
+              />
+              <input
+                id="tem"
+                class="bet_amount"
+                type="number"
+                name="quantity"
+                min="1"
+                max="10"
+                value="0"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="right">
+        <div class="righthead">
+          <div class="frh1">
+            <h4 id="score">Cash:$500</h4>
+          </div>
+          <h5 id="gamestatus"></h5>
+          <button id="reset">Reset</button>
+        </div>
+
+        <div class="container2">
+          <div class="r-row">
+            <h4>jackpot 6x6x6x</h4>
+            <input
+              id="jackpot"
+              class="bet_amount"
+              type="number"
+              name="quantity"
+              min="1"
+              max="500"
+              value="0"
+            />
+          </div>
+          <div class="r-row">
+            <div class="r-col-sm-4">
+              <img
+                id="dice1"
+                class="right_images"
+                src="images/Picture7.svg"
+                alt="Image 1"
+              />
+            </div>
+            <div class="r-col-sm-4">
+              <img
+                id="dice2"
+                class="right_images"
+                src="images/Picture7.svg"
+                alt="Image 2"
+              />
+            </div>
+            <div class="r-col-sm-4">
+              <img
+                id="dice3"
+                class="right_images"
+                src="images/Picture7.svg"
+                alt="Image 3"
+              />
+            </div>
+          </div>
+          <div class="r-row">
+            <div class="r-col-sm-4">
+              <img
+                id="dice4"
+                class="right_images"
+                src="images/Picture7.svg"
+                alt="Image 4"
+              />
+            </div>
+            <div class="r-col-sm-4">
+              <img
+                id="dice5"
+                class="right_images"
+                src="images/Picture7.svg"
+                alt="Image 5"
+              />
+            </div>
+            <div class="r-col-sm-4">
+              <img
+                id="dice6"
+                class="right_images"
+                src="images/Picture7.svg"
+                alt="Image 6"
+              />
+            </div>
+          </div>
+        </div>
+     <div id="gif" class="hidden">
+          <iframe
+          src="https://giphy.com/embed/UXAUwJZ2McfIMey0vb"
+          width="48"
+          height="48"
+          frameborder="0"
+          class="giphy-embed"
+          allowfullscreen
+        ></iframe>
+        </div>    
+       
+
+        <div id="switch">
+          <h3>Roll dice</h3>
+        </div>
+        <audio id="myAudio">
+          <source src="dice-142528.mp3" type="audio/mpeg" />
+        </audio>
+
+        <audio id="myApplause">
+          <source src="1742406481_258102835_1872772008.mp3" type="audio/mpeg" />
+        </audio>
+
+        <audio id="music">
+          <source src="melodyloops-preview-baby-fun-2m30s.mp3"  type="audio/mpeg" />
+        </audio>
+      </section>
+    </main>
+   
+    
+   
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
