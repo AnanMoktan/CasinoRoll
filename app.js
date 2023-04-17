@@ -187,7 +187,7 @@ $(document).ready(() => {
   $("#switch").click(() => {
     //toogle
     if ($("#switch h3").text() === "Roll dice") {
-      playSound();
+     
       bowamt = parseInt($("#bow").val());
       ballamt = parseInt($("#ball").val());
       clockamt = parseInt($("#clock").val());
@@ -278,6 +278,7 @@ $(document).ready(() => {
       draw(deck);
       $("#score").text("Cash:$" + scores);
       $("#switch h3").text("Next Game");
+       playSound();
     } else {
 
 
