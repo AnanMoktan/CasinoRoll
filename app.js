@@ -78,8 +78,20 @@ function generateRandomDigits() {
   }
   return digits;
 }
-
+function removerclass(){
+  var inputElements = document.getElementsByClassName('r-col-sm-4');
+      for(var i = 0; i < inputElements.length; i++) {
+          inputElements[i].classList.remove("r");
+      }
+  
+}
 function draw(imageSources) {
+  var inputElements = document.getElementsByClassName('r-col-sm-4');
+      for(var i = 0; i < inputElements.length; i++) {
+          inputElements[i].classList.add("r");
+      }
+  
+  
   for (let i = 1; i <= imageSources.length; i++) {
     const img = document.getElementById("dice" + i);
     let index = 1;
@@ -187,7 +199,7 @@ $(document).ready(() => {
   $("#switch").click(() => {
     //toogle
     if ($("#switch h3").text() === "Roll dice") {
-     
+      
       bowamt = parseInt($("#bow").val());
       ballamt = parseInt($("#ball").val());
       clockamt = parseInt($("#clock").val());
@@ -276,9 +288,9 @@ $(document).ready(() => {
       
 
       draw(deck);
+      playSound();
       $("#score").text("Cash:$" + scores);
       $("#switch h3").text("Next Game");
-       playSound();
     } else {
 
 
@@ -297,6 +309,7 @@ $(document).ready(() => {
       for(var i = 0; i < inputElements.length; i++) {
           inputElements[i].value = '0';
       }
+      removerclass();
       $("#switch h3").text("Roll dice");
     }
   });
