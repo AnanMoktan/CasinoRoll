@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <button id="musics">music on</button>
-    <header><h2>Casino Roll</h2></header>
+    <button class="heading" id="musics">music on</button>
+    <header><h2 id="heading">Casino Roll</h2></header>
    
 
     <main>
       <section id="left">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 btna">
               <img
                 class="left_images"
                 src="images/Picture1.svg"
                 alt="Image 1"
               />
+
               <input
                 id="bow"
                 class="bet_amount"
@@ -32,8 +33,8 @@
                 value="0"
               />
             </div>
-            <div class="col-sm-4">
-              <img
+            <div class="col-sm-4 btna">
+              <img class="ball"
                 class="left_images"
                 src="images/Picture2.svg"
                 alt="Image 2"
@@ -48,9 +49,10 @@
                 value="0"
               />
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 btna">
               <img
-                class="left_images"
+              class="clock"
+                class="left_images roll"
                 src="images/Picture3.svg"
                 alt="Image 3"
               />
@@ -66,8 +68,9 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 btna">
               <img
+              class="apple"
                 class="left_images"
                 src="images/Picture4.svg"
                 alt="Image 4"
@@ -82,7 +85,7 @@
                 value="0"
               />
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 btna">
               <img
                 class="left_images"
                 src="images/Picture5.svg"
@@ -98,7 +101,7 @@
                 value="0"
               />
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 btna">
               <img
                 class="left_images"
                 src="images/Picture6.svg"
@@ -117,18 +120,18 @@
           </div>
         </div>
       </section>
-      <section id="right">
+      <section id="right" class="btna">
         <div class="righthead">
           <div class="frh1">
-            <h4 id="score">Cash:$500</h4>
+            <h3 id="score" class="heading">Cash:$500</h4>
           </div>
           <h5 id="gamestatus"></h5>
-          <button id="reset">Reset</button>
+          <button class="btna heading" id="reset">Reset</button>
         </div>
 
         <div class="container2">
           <div class="r-row">
-            <h4>jackpot 6x6x6x</h4>
+            <h3 class="heading">jackpot <span class="neon2">6x</span></h3>
             <input
               id="jackpot"
               class="bet_amount"
@@ -204,8 +207,8 @@
         </div>    
        
 
-        <div id="switch">
-          <h3>Roll dice</h3>
+        <div  id="switch">
+          <h3 class="neon3">Roll dice</h3>
         </div>
         <audio id="myAudio">
           <source src="dice-142528.mp3" type="audio/mpeg" />
@@ -220,9 +223,9 @@
         </audio>
       </section>
     </main>
-   
-    
-   
+      <footer>
+        <p id="tm">&copy; 2023 ucmstudent</p>
+      </footer>
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"
       integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
