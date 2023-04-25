@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <button class="heading" id="musics">music on</button>
+    <!-- <div>
+    <span id="musics"><i class="bi bi-volume-up"></i></span>
+    <span id="musics"><i class="bi bi-volume-mute"></i></span>
+  </div> -->
+    <button type="button" class="mb-3" id="musics">Music ON</button>
     <header><h2 id="heading">Casino Roll</h2></header>
    
-
     <main>
       <section id="left">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
             <div class="col-sm-4 btna">
               <img
@@ -123,15 +126,15 @@
       <section id="right" class="btna">
         <div class="righthead">
           <div class="frh1">
-            <h3 id="score" class="heading">Cash:$500</h4>
+            <h3 id="score" class="heading"><span>&nbsp;&nbsp;</span>Cash:$500</h3>
           </div>
           <h5 id="gamestatus"></h5>
-          <button class="btna heading" id="reset">Reset</button>
+          <button class="btn heading" id="reset">Reset</button>
         </div>
 
         <div class="container2">
           <div class="r-row">
-            <h3 class="heading">jackpot <span class="neon2">6x</span></h3>
+            <h3 class="heading">Jackpot <span class="neon2">6x</span></h3>
             <input
               id="jackpot"
               class="bet_amount"
@@ -224,7 +227,7 @@
       </section>
     </main>
       <footer>
-        <p id="tm">&copy; 2023 ucmstudent</p>
+        <p id="tm">&copy; 2023 University of Central Missouri Group</p>
       </footer>
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"

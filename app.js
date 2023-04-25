@@ -9,7 +9,7 @@ var appleamt = parseInt($("#apple").val());
 var umbamt = parseInt($("#umb").val());
 var temamt = parseInt($("#tem").val());
 var jakamt = parseInt($("#jackpot").val());
-var totalbet=0;
+var totalbet = 0;
 const dice = dicemake();
 console.log(bowamt);
 console.log(dice);
@@ -18,27 +18,21 @@ const gameaudio = document.getElementById("music");
 function toggleMusic() {
   if (gameaudio.paused) {
     gameaudio.play();
-  } 
-  gameaudio.addEventListener('ended', function() {
+  }
+  gameaudio.addEventListener("ended", function () {
     gameaudio.currentTime = 0;
     gameaudio.play();
   });
 }
 
-playbutton.addEventListener("click", function() {
-  
-  if ($("#musics").text() === "music on"){
-    
-    
-      toggleMusic();
-    
-    
-  
-    $("#musics").text("music off");
+playbutton.addEventListener("click", function () {
+  if ($("#musics").text() === "music on") {
+    toggleMusic();
 
-  }else{
+    $("#musics").text("music off");
+  } else {
     stopMusic();
-    
+
     $("#musics").text("music on");
   }
 });
@@ -49,7 +43,6 @@ function playSound() {
 }
 
 function stopMusic() {
- 
   gameaudio.pause();
   gameaudio.currentTime = 0;
 }
@@ -78,20 +71,18 @@ function generateRandomDigits() {
   }
   return digits;
 }
-function removerclass(){
-  var inputElements = document.getElementsByClassName('r-col-sm-4');
-      for(var i = 0; i < inputElements.length; i++) {
-          inputElements[i].classList.remove("r");
-      }
-  
+function removerclass() {
+  var inputElements = document.getElementsByClassName("r-col-sm-4");
+  for (var i = 0; i < inputElements.length; i++) {
+    inputElements[i].classList.remove("r");
+  }
 }
 function draw(imageSources) {
-  var inputElements = document.getElementsByClassName('r-col-sm-4');
-      for(var i = 0; i < inputElements.length; i++) {
-          inputElements[i].classList.add("r");
-      }
-  
-  
+  var inputElements = document.getElementsByClassName("r-col-sm-4");
+  for (var i = 0; i < inputElements.length; i++) {
+    inputElements[i].classList.add("r");
+  }
+
   for (let i = 1; i <= imageSources.length; i++) {
     const img = document.getElementById("dice" + i);
     let index = 1;
@@ -122,7 +113,7 @@ function evaluateHand(hand) {
   if (jakamt > 0) {
     if (new Set(hand).size === 6) {
       scores += 6 * jakamt;
-      $("#gamestatus").text("You hit the jackpot");
+      $("#gamestatus").text("You Hit the Jackpot");
       let elem = document.getElementById("gif");
       elem.classList.remove("hidden");
       playSoundappl();
@@ -178,7 +169,6 @@ function evaluateHand(hand) {
   return hand;
 }
 $(document).ready(() => {
-           
   if (typeof Storage !== "undefined") {
     // Retrieve the saved score from local storage
     if (scores == 0 || scores < 0) {
@@ -199,14 +189,13 @@ $(document).ready(() => {
   $("#switch").click(() => {
     //toogle
     if ($("#switch h3").text() === "Roll dice") {
-      
       bowamt = parseInt($("#bow").val());
       ballamt = parseInt($("#ball").val());
       clockamt = parseInt($("#clock").val());
       appleamt = parseInt($("#apple").val());
       umbamt = parseInt($("#umb").val());
       temamt = parseInt($("#tem").val());
-      jakamt =parseInt($("#jackpot").val());
+      jakamt = parseInt($("#jackpot").val());
       totalbet =
         bowamt + ballamt + clockamt + appleamt + umbamt + temamt + jakamt;
       //checking validity of betting amount
@@ -219,53 +208,60 @@ $(document).ready(() => {
         isNaN(temamt) ||
         isNaN(jakamt)
       ) {
-        alert("Please enter only number.");
+        alert("Please Enter Only Numbers");
         bowamt = ballamt = clockamt = appleamt = umbamt = temamt = jakamt = 0;
         location.reload();
       }
       if (totalbet > scores) {
-        alert("bet amount most be less than cash in hand please re-enter");
+        alert("Bet Amount must be less than Cash-in-Hand, Please Re-Enter");
 
         location.reload();
       }
       if (jakamt < 0 || jakamt > scores || jakamt > 500) {
-        alert("you entered invalid jackpot  bet amount please re-enter");
+        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
         jakamt = 0;
         location.reload();
       }
 
       if (bowamt < 0 || bowamt > scores || bowamt > 10) {
-        alert("you entered invalid bow  bet amount please re-enter");
+        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
         bowamt = 0;
         location.reload();
       }
       if (ballamt < 0 || ballamt > scores || ballamt > 10) {
-        alert("you entered invalid ball bet amount please re-enter");
+        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
         ballamt = 0;
         location.reload();
       }
       if (clockamt < 0 || clockamt > scores || clockamt > 10) {
-        alert("you entered invalid clock bet amount please re-enter");
+        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
         clockamt = 0;
         location.reload();
       }
       if (appleamt < 0 || appleamt > scores || appleamt > 10) {
-        alert("you entered invalid apple bet amount please re-enter");
+        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
         appleamt = 0;
         location.reload();
       }
       if (umbamt < 0 || umbamt > scores || umbamt > 10) {
-        alert("you entered invalid umbrella bet amount please re-enter");
+        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
         umbamt = 0;
         location.reload();
       }
       if (temamt < 0 || temamt > scores || temamt > 10) {
-        alert("you entered invalid temple bet amount please re-enter");
+        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
         temamt = 0;
         location.reload();
       }
-      if(jakamt>0&&bowamt>0||jakamt>0&&ballamt>0||jakamt>0&&clockamt>0||jakamt>0&&appleamt>0||jakamt>0&&umbamt>0||jakamt>0&&temamt>0){
-        alert("you cannot bet on jackpot and other items please re-enter");
+      if (
+        (jakamt > 0 && bowamt > 0) ||
+        (jakamt > 0 && ballamt > 0) ||
+        (jakamt > 0 && clockamt > 0) ||
+        (jakamt > 0 && appleamt > 0) ||
+        (jakamt > 0 && umbamt > 0) ||
+        (jakamt > 0 && temamt > 0)
+      ) {
+        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
         location.reload();
       }
       scores =
@@ -285,19 +281,15 @@ $(document).ready(() => {
       console.log("Your hand evaluation is:", evaluateHand(deck));
 
       localStorage.setItem("score", scores);
-      
 
       draw(deck);
       playSound();
       $("#score").text("Cash:$" + scores);
       $("#switch h3").text("Next Game");
     } else {
-
-
       for (let i = 1; i <= 6; i++) {
         const img = document.getElementById("dice" + i);
-        
-        
+
         img.src = "images/Picture7.svg";
       }
       var elem = document.getElementById("gif");
@@ -305,9 +297,9 @@ $(document).ready(() => {
         elem.classList.add("hidden");
       }
       $("#gamestatus").text("");
-      var inputElements = document.getElementsByClassName('bet_amount');
-      for(var i = 0; i < inputElements.length; i++) {
-          inputElements[i].value = '0';
+      var inputElements = document.getElementsByClassName("bet_amount");
+      for (var i = 0; i < inputElements.length; i++) {
+        inputElements[i].value = "0";
       }
       removerclass();
       $("#switch h3").text("Roll dice");
