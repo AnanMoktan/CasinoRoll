@@ -194,7 +194,7 @@ input {
 
 .btna:hover {
   transform: translateY(-4px);
-  /* background-color: rgba(33, 239, 208, 0.09); */
+   background-color: rgba(33, 239, 208, 0.09); 
 }
 
 @keyframes roll {
