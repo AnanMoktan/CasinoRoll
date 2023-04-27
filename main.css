@@ -20,7 +20,8 @@ footer {
 body {
 
   text-align: center;
-  background-image: url('cool-geometric-triangular-figure-neon-laser-light-great-backgrounds.jpg');
+  /* background-image: url('cool-geometric-triangular-figure-neon-laser-light-great-backgrounds.jpg'); */
+  background-image: url('images/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds.jpg');
   background-repeat: no-repeat;
   background-size: 100% 120%;
 
@@ -193,7 +194,7 @@ input {
 
 .btna:hover {
   transform: translateY(-4px);
-  background-color: rgba(33, 239, 208, 0.09);
+  /* background-color: rgba(33, 239, 208, 0.09); */
 }
 
 @keyframes roll {
@@ -384,6 +385,7 @@ input {
 .ball:hover {
   animation: bounce 1s ease infinite;
 }
+
 
 .clock:hover {
   animation: ring 1s ease infinite;

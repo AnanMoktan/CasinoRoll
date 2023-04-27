@@ -218,38 +218,38 @@ $(document).ready(() => {
         location.reload();
       }
       if (jakamt < 0 || jakamt > scores || jakamt > 500) {
-        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
+        alert("You Entered Invalid Jackpot or Bet Amount, Please Re-Enter");
         jakamt = 0;
         location.reload();
       }
 
       if (bowamt < 0 || bowamt > scores || bowamt > 10) {
-        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
+        alert("You Entered Invalid Jackpot or Bet Amount, Please Re-Enter");
         bowamt = 0;
         location.reload();
       }
       if (ballamt < 0 || ballamt > scores || ballamt > 10) {
-        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
+        alert("You Entered Invalid Jackpot or Bet Amount, Please Re-Enter");
         ballamt = 0;
         location.reload();
       }
       if (clockamt < 0 || clockamt > scores || clockamt > 10) {
-        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
+        alert("You Entered Invalid Jackpot or Bet Amount, Please Re-Enter");
         clockamt = 0;
         location.reload();
       }
       if (appleamt < 0 || appleamt > scores || appleamt > 10) {
-        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
+        alert("You Entered Invalid Jackpot or Bet Amount, Please Re-Enter");
         appleamt = 0;
         location.reload();
       }
       if (umbamt < 0 || umbamt > scores || umbamt > 10) {
-        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
+        alert("You Entered Invalid Jackpot or Bet Amount, Please Re-Enter");
         umbamt = 0;
         location.reload();
       }
       if (temamt < 0 || temamt > scores || temamt > 10) {
-        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
+        alert("You Entered Invalid Jackpot or Bet Amount, Please Re-Enter");
         temamt = 0;
         location.reload();
       }
@@ -261,7 +261,7 @@ $(document).ready(() => {
         (jakamt > 0 && umbamt > 0) ||
         (jakamt > 0 && temamt > 0)
       ) {
-        alert("You Entered Invalid Jackpot  Bet Amount, Please Re-Enter");
+        alert("You Entered Invalid Jackpot or Bet Amount, Please Re-Enter");
         location.reload();
       }
       scores =
