@@ -214,7 +214,7 @@ $(document).ready(() => {
       }
       if (totalbet > scores) {
         alert("Bet Amount must be less than Cash-in-Hand, Please Re-Enter");
-
+        bowamt = ballamt = clockamt = appleamt = umbamt = temamt = jakamt = 0;
         location.reload();
       }
       if (jakamt < 0 || jakamt > scores || jakamt > 500) {
